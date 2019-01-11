@@ -76,6 +76,7 @@ CTAB: λύει κύτταρα και τα βοηθά να διαλυθούν, α
 ## Oligos
 
 ## PCR Reagents
+If a "ready-to-go" master mix is provided, make aliquotes of it.
 
 ## Other Reagents
 ### ddH~2~O
