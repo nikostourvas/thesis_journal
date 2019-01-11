@@ -23,6 +23,8 @@ output_dir: "docs"
 # Introduction
 This is a minimal example of using the bookdown package to write a lab book. The output format for this example is bookdown::gitbook.
 
+Test test.
+
 # Protocols
 
 Here is the repository of all protocols used in the experiments of this lab book.
