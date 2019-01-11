@@ -20,7 +20,7 @@ description: "This is a minimal example of using the bookdown package to write a
 output_dir: "docs"
 ---
 
-# Introduction
+# index {-}
 This is a minimal example of using the bookdown package to write a lab book. The output format for this example is bookdown::gitbook.
 
 Test test.
