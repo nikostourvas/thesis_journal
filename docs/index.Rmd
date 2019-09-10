@@ -1,0 +1,98 @@
+---
+title: "test"
+site: bookdown::bookdown_site
+author: "Νικόλαος Τουρβάς"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+fontsize: 11pt
+papersize: a4
+documentclass: article
+output:
+  html_document:
+    theme: united
+    toc: yes
+    toc_float: yes
+  bookdown::pdf_document2:
+    keep_tex: yes
+    latex_engine: xelatex
+    toc: no
+    toc_depth: 3
+    number_sections: no
+  bookdown::word_document2:
+    toc: yes
+  bookdown::gitbook:
+    config:
+      toc:
+        collapse: subsection
+        scroll_highlight: yes
+        before: null
+        after: null
+      toolbar:
+        position: fixed
+      edit : null
+      download: null
+      search: yes
+      fontsettings:
+        theme: white
+        family: sans
+        size: 2
+      sharing:
+        facebook: no
+        twitter: yes
+        google: no
+        linkedin: no
+        weibo: no
+        instapaper: no
+        vk: no
+        all: ['facebook', 'twitter', 'linkedin', 'weibo', 'instapaper']      
+header-includes: 
+  # \usepackage[greek]{babel}
+  # \setmainfont[Ligatures=TeX,Scale=1.00,AutoFakeSlant=0.2]{Tahoma}
+  # \usepackage{extsizes}
+linestretch: 1.15
+# lof: no
+# lot: no
+# mainfont: Liberation Serif
+geometry: margin=2.54cm
+# bibliography: library.bib
+# csl: apa.csl
+always_allow_html: yes
+---
+
+<!-- Things to fix in .tex document
+1. fix title size
+2. table hlines
+3. first line of each reference sticking out
+4. create break page between lot and text, just type: \newpage
+5. indent first line of each paragraph
+6. specific titles should not be numbered (eg. Συντμήσεις) -> ## Συντμήσεις {-} 
+7. make documentclass article have a title page -> write this in first line \documentclass[11pt,a4paper,titlepage]{article}
+8. consistent page number of digital and print copy: https://stackoverflow.com/questions/501378/how-can-i-start-pagenumbers-where-the-first-section-occurs-in-latex -->
+
+
+<!-- For 1 you find this line: -->
+<!-- \pretitle{\vspace{\droptitle}\centering\huge} -->
+<!-- and transform it to this: -->
+<!-- \pretitle{\vspace{\droptitle}\centering\Large\textbf} -->
+
+<!-- For 3 you need to install package hanging as follows: tlmgr_install(pkgs = "hanging") -->
+<!-- Then in your .tex file add: \usepackage{hanging} -->
+<!-- And in the bibliography section add: \begin{hangparas}{2em}{1} -->
+<!-- The previous should be inserted after: \section{Βιβλιογραφία} -->
+<!-- In the end of the section add: \end{hangparas} -->
+
+<!-- For 5 find: \setlength{\parindent}{0pt} -->
+<!-- and make it: \setlength{\parindent}{4em} -->
+<!-- By default latex will not indent the first paragraph of each section -->
+<!-- If you want to indent you should use: \usepackage{indentfirst} -->
+<!-- If you don't want to indent a specific paragraph (eg. because it's only one line) then use: \noindent before the text (eg. \noindent Keimeno poy...-->
+
+# Intro
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(include = FALSE, echo=FALSE)
+```
+
+```{r}
+library(bookdown)
+```
+
